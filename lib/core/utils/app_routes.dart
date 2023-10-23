@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 abstract class Routes{
   static const String homeView = 'HomeView';
+  static const String onBoarding = '/onBoarding';
  static final GoRouter router = GoRouter(
   
   routes: [
