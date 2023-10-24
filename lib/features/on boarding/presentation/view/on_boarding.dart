@@ -1,3 +1,6 @@
+import 'package:daleel/core/widget/custom_btn.dart';
+import 'package:daleel/features/on%20boarding/presentation/widget/custom_nav_bar.dart';
+import 'package:daleel/features/on%20boarding/presentation/widget/on_boarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -5,6 +8,30 @@ class OnBoarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 40
+              ),
+               const CustomNavBar(),
+              OnBoardingWidgetBody(),
+                const CustomElevatedbutton(text: 'Next'),
+                const SizedBox(
+                height: 17,
+              ),
+              
+            ],
+          ),
+        ),
+      ),
+    );
+
+    
   }
 }
+
+
