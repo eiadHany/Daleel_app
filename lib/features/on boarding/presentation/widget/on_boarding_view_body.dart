@@ -12,22 +12,31 @@ class OnBoardingWidgetBody extends StatelessWidget {
 final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: 550,
       child: PageView.builder(
+        physics: const BouncingScrollPhysics(),
         controller: _controller,
         itemCount: 3,
         itemBuilder: (context, index) {
           return Column(
             children: [
-              Image.asset(Assets.onBoarding1),
+              Container(
+                height: 290,
+                width: 343,
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(Assets.onBoarding1),
+                  fit: BoxFit.fill)
+                ),
+               ),
               const SizedBox(
                 height: 24,
               ),
               CustomSmoothPageIndicator(controller: _controller),
               const SizedBox(height: 24,),
-              const Text('Explore The history with Dalel in a smart way', style: CustomTextStyle.poppins500style24, textAlign: TextAlign.center,),
+              const Text('Explore The history with Dalel in a smart way', style: CustomTextStyle.poppins500style24, textAlign: TextAlign.center,maxLines: 2,overflow: TextOverflow.ellipsis,),
               const SizedBox(height: 16,),
-              const Text('Using our app’s history libraries you can find many historical periods ', style: CustomTextStyle.poppins300style16, textAlign: TextAlign.center,),
+              const Text('Using our app’s history libraries you can find many historical periods ', style: CustomTextStyle.poppins300style16, textAlign: TextAlign.center,maxLines: 2,overflow: TextOverflow.ellipsis,),
            
             ],
           );
