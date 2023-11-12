@@ -37,13 +37,9 @@ class _OnBoardingState extends State<OnBoarding> {
                   currentIndex = index;
                 },
               ),
-              const SizedBox(
-                height: 90,
-              ),
+             
               GetButtons(currentIndex: currentIndex, controller: _controller),
-              const SizedBox(
-                height: 17,
-              ),
+              
             ],
           ),
         ),
